@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>chAt</title>
+		<link rel="shortcut icon" href="images/logo2.png"/>
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
+		<link rel="stylesheet" href="css/css.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/fonts.css">
+		<script src="js/chat.js"></script>
+		<script src="js/log.js"></script>
+
+	</head>
+
+
+	<body>
+
+		<header style="text-align: center;">
+			<input type="image" src="images/logo1.png" class="headlogol"> <input type="image" src="images/name1.png" class="headpic"> <input type="image" src="images/logo1.png" class="headlogor" style="transform: scaleX(-1)";>
+		</header>
+
+		<div style="display: inline-block; width: 100%; text-align: center;">
+				<p class="heading"> chAt </p>
+				<br>
+				<p class="name"> - by &emsp; Ashul &ensp; Gupta</p>
+		</div>
+
+		<br><br><br>
+
+		<div id="loginwin" style="display: inline-block; width: 100%; text-align: right; margin-bottom: 50px;">
+			<label for="pnum">Phone Number</label>&ensp;
+			<input type="textarea" id="pnum" style="width: 50%; height: 30px; display: inline-block;" placeholder="Phone Number required for login......." onkeypress="Javascript: if (event.keyCode == 13) loginreg(); else return (event.charCode > 47 && event.charCode < 58);" value="">
+			<br><br>
+			<label for="pass">Password</label>&ensp;
+			<input type="textarea" id="pass" style="width: 50%; height: 30px; display: inline-block;" placeholder="Password required for login......." onkeypress="Javascript: if (event.keyCode == 13) loginreg();" value="">
+			<br><br>
+			<label for="pass">Nickname</label>&ensp;
+			<input type="textarea" id="nick" style="width: 50%; height: 30px; display: inline-block;" placeholder="Nickname required for register......." onkeypress="Javascript: if (event.keyCode == 13) loginreg();" value="">
+			<br>
+		</div>
+
+		<div id="chatwin" style="display: none; width: 100%; margin-bottom: 50px;">
+			<div id="addfrn" style="width: 40%; text-align: center; display: inline-block; float: left;">
+				<input type="textarea" id="addpnum" style="width: 90%; height: 30px;" placeholder="Phone Number to add......." onkeypress="Javascript: if (event.keyCode == 13) addfrnfun(); else return (event.charCode > 47 && event.charCode < 58);" value="">
+				<br><br>
+				<input type="textarea" id="addnick" style="width: 90%; height: 30px;" placeholder="Nickname to add......." onkeypress="Javascript: if (event.keyCode == 13) addfrnfun();" value="">
+				<br><br><br><br>
+				<div id="friendlist" style="display: inline-block; width: 90%; text-align: center;">
+
+				</div>
+
+			</div>
+
+			&emsp;
+
+			<div style="width: 50%; height: 480px; display: inline-block; vertical-align: top; float: right; margin-right: 50px;">
+
+				<iframe	id="friendchat" class="box" srcdoc="" style="width: 99%; height: 440px;  background-color: transparent; word-wrap: break-word;"></iframe>
+
+				<input type="textarea" id="chatbox" style="width: 100%; height: 30px; display: inline-block;" placeholder="Select a friend first......." onkeypress="Javascript: if (event.keyCode == 13) sendmes();" disabled>
+
+			</div>
+		</div>
+
+		<script>
+			function afterlog() {
+				document.getElementById("chatwin").style.display = "inline-block";
+				document.getElementById("loginwin").style.display = "none";
+			}
+			//afterlog()
+		</script>
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5eea359db14a8cb7"></script>
+
+	</body>
+</html>

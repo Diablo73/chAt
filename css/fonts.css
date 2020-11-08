@@ -1,0 +1,38 @@
+@font-face {
+	font-family: "Helene Queen.K";
+	src:url("https://db.onlinewebfonts.com/t/753f3fa721692d98341d9fe86bdd52eb.eot");
+	src:url("https://db.onlinewebfonts.com/t/753f3fa721692d98341d9fe86bdd52eb.eot?#iefix") format("embedded-opentype"),
+		url("https://db.onlinewebfonts.com/t/753f3fa721692d98341d9fe86bdd52eb.woff2") format("woff2"),
+		url("https://db.onlinewebfonts.com/t/753f3fa721692d98341d9fe86bdd52eb.woff") format("woff"),
+		url("https://db.onlinewebfonts.com/t/753f3fa721692d98341d9fe86bdd52eb.ttf") format("truetype"),
+		url("https://db.onlinewebfonts.com/t/753f3fa721692d98341d9fe86bdd52eb.svg#Helene Queen.K") format("svg"); }
+
+@font-face {
+	font-family: "Supernatural Knight";
+	src:url("https://db.onlinewebfonts.com/t/f2a118fd61847e5119a2f0befffa1e5e.eot");
+	src:url("https://db.onlinewebfonts.com/t/f2a118fd61847e5119a2f0befffa1e5e.eot?#iefix") format("embedded-opentype"),
+		url("https://db.onlinewebfonts.com/t/f2a118fd61847e5119a2f0befffa1e5e.woff2") format("woff2"),
+		url("https://db.onlinewebfonts.com/t/f2a118fd61847e5119a2f0befffa1e5e.woff") format("woff"),
+		url("https://db.onlinewebfonts.com/t/f2a118fd61847e5119a2f0befffa1e5e.ttf") format("truetype"),
+		url("https://db.onlinewebfonts.com/t/f2a118fd61847e5119a2f0befffa1e5e.svg#Supernatural Knight") format("svg");
+}
+
+@font-face {
+	font-family: "RoyalClassicR";
+	src:url("https://db.onlinewebfonts.com/t/0f9e13fb146923326ce24adfbd23fc22.eot");
+	src:url("https://db.onlinewebfonts.com/t/0f9e13fb146923326ce24adfbd23fc22.eot?#iefix") format("embedded-opentype"),
+		url("https://db.onlinewebfonts.com/t/0f9e13fb146923326ce24adfbd23fc22.woff2") format("woff2"),
+		url("https://db.onlinewebfonts.com/t/0f9e13fb146923326ce24adfbd23fc22.woff") format("woff"),
+		url("https://db.onlinewebfonts.com/t/0f9e13fb146923326ce24adfbd23fc22.ttf") format("truetype"),
+		url("https://db.onlinewebfonts.com/t/0f9e13fb146923326ce24adfbd23fc22.svg#RoyalClassicW01-Regular") format("svg");
+}
+
+@font-face {
+	font-family: "RoyalClassicB";
+	src:url("https://db.onlinewebfonts.com/t/220bfb51b36436b97f6ca38b1018bd4d.eot");
+	src:url("https://db.onlinewebfonts.com/t/220bfb51b36436b97f6ca38b1018bd4d.eot?#iefix") format("embedded-opentype"),
+		url("https://db.onlinewebfonts.com/t/220bfb51b36436b97f6ca38b1018bd4d.woff2") format("woff2"),
+		url("https://db.onlinewebfonts.com/t/220bfb51b36436b97f6ca38b1018bd4d.woff") format("woff"),
+		url("https://db.onlinewebfonts.com/t/220bfb51b36436b97f6ca38b1018bd4d.ttf") format("truetype"),
+		url("https://db.onlinewebfonts.com/t/220bfb51b36436b97f6ca38b1018bd4d.svg#RoyalClassicW01-Bold") format("svg");
+}

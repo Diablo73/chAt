@@ -1,0 +1,64 @@
+header {
+	background: rgb(0,0,0);
+	background: -moz-radial-gradient(circle, rgba(0,0,0,1) 18%, rgba(18,18,18,1) 50%, rgba(38,38,38,1) 82%);
+	background: -webkit-radial-gradient(circle, rgba(0,0,0,1) 18%, rgba(18,18,18,1) 50%, rgba(38,38,38,1) 82%);
+	background: radial-gradient(circle, rgba(0,0,0,1) 18%, rgba(18,18,18,1) 50%, rgba(38,38,38,1) 82%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#262626",GradientType=1);
+	border-radius: 100px;
+}
+
+.headpic {
+	display: inline-block;
+	width: 16%;
+	border: 0;
+}
+.headlogol {
+	display: inline-block;
+	width: 8%;															/* 8% = logo1 | 15% = logo4*/
+	border: 0;
+}
+.headlogor {
+	display: inline-block;
+	width: 8%;															/* 8% = logo1 | 15% = logo4*/
+	border: 0;
+}
+
+.pay {
+	display: inline-block;
+	width: 200px;
+}
+
+body{
+	background: rgb(0,0,0);
+	background: -moz-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(38,38,38,1) 33%, rgba(34,34,34,1) 50%, rgba(38,38,38,1) 66%, rgba(0,0,0,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(38,38,38,1) 33%, rgba(34,34,34,1) 50%, rgba(38,38,38,1) 66%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(38,38,38,1) 33%, rgba(34,34,34,1) 50%, rgba(38,38,38,1) 66%, rgba(0,0,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+
+.heading {
+	text-align: center;
+	display: inline-block;
+	font-size: 60px;
+	font-weight: bold;
+	color: white;
+	font-family: 'RoyalClassicB', calibri;
+	margin: 0 auto;
+}
+
+.inp {
+	font-size: 20px;
+	float: right;
+	width: 50%;
+}
+
+.name {
+	text-align: center;
+	display: inline-block;
+	font-size: 84px;
+	/*font-weight: bold;*/
+	/* font-style: italic; */
+	font-family: 'Helene Queen.K', 'Kunstler Script', 'Edwardian Script ITC', 'Monotype Corsiva', calibri;
+	color: white;
+	margin: 0 auto;
+}
