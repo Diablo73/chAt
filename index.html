@@ -35,14 +35,22 @@
 		<br><br><br>
 
 		<div id="loginwin" style="display: inline-block; width: 75%; text-align: right; margin-bottom: 50px;">
-			<label for="pnum">Phone Number</label>&ensp;
-			<input type="textarea" id="pnum" style="width: 50%; height: 30px; display: inline-block;" placeholder="Phone Number required for login......." onkeypress="Javascript: if (event.keyCode == 13) loginreg(); else return (event.charCode > 47 && event.charCode < 58);" value="">
+			<div id="phonenumberdiv">
+				<label for="pnum">Phone Number</label>&ensp;
+				<input type="textarea" id="pnum" style="width: 50%; height: 30px; display: inline-block;" placeholder="Phone Number required for login......." onkeypress="Javascript: if (event.keyCode == 13) loginreg(); else return (event.charCode > 47 && event.charCode < 58);" value="">
+			</div>
 			<br><br>
-			<label for="pass">Password</label>&ensp;
-			<input type="textarea" id="pass" style="width: 50%; height: 30px; display: inline-block;" placeholder="Password required for login......." onkeypress="Javascript: if (event.keyCode == 13) loginreg();" value="">
+			<div id="passworddiv">
+				<label for="pass">Password</label>&ensp;
+				<input type="textarea" id="pass" style="width: 50%; height: 30px; display: inline-block;" placeholder="Password required for login......." onkeypress="Javascript: if (event.keyCode == 13) loginreg();" value="">
+			</div>
 			<br><br>
-			<label for="pass">Nickname</label>&ensp;
-			<input type="textarea" id="nick" style="width: 50%; height: 30px; display: inline-block;" placeholder="Nickname required for register......." onkeypress="Javascript: if (event.keyCode == 13) loginreg();" value="">
+			<div id="recaptchadiv" style="width: 50%; display: inline-block;"></div>
+			<br><br>
+			<div id="otpdiv" style="display: none;">
+				<label for="otp6">OTP</label>&ensp;
+				<input type="textarea" id="otp6" style="width: 50%; height: 30px; display: inline-block;" placeholder="OTP required for register......." onkeypress="Javascript: if (event.keyCode == 13) checkotp();" onfocus="sendotp()" value="">
+			</div>
 			<br>
 		</div>
 
@@ -52,7 +60,7 @@
 				<br><br>
 				<input type="textarea" id="addnick" style="width: 90%; height: 30px;" placeholder="Nickname to add......." onkeypress="Javascript: if (event.keyCode == 13) addfrnfun();" value="">
 				<br><br><br><br>
-				<div id="friendlist" style="display: inline-block; width: 90%; text-align: center;">
+				<div id="friendlist" style="display: inline-block; width: 90%; text-align: right;">
 
 				</div>
 

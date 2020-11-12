@@ -35,9 +35,6 @@ function recmes() {
 				[pnum]: [0, s[1]]
 			});
 		}
-		else {
-			console.log("No new messages");
-		}
 	}).catch(function(error) {
 	console.log("Error getting document:", error);
 	});
@@ -57,7 +54,7 @@ function listfrn() {
 				if (key === "pass" || key === "nic") {
 					continue;
 				}
-				htmlfrns = '<div class="radiogrp" onclick="selfrn(document.getElementById(\'radio\' + ' + key + ').value)"><input type="radio" id="radio' + key + '" class="radio" name="radio" onclick="selfrn(this.value)" value="' + key + '"><label for="radio' + key + '">' + r[key][1] + ' - ' + key + '</label></div><br>';
+				htmlfrns = '<button id="button' + key + '" class="button" onclick="selfrn(this.value)" value="' + key + '">' + r[key][1] + ' - ' + key + '</button><br><br>';
 				document.getElementById("friendlist").innerHTML += htmlfrns;
 				pages[key] = "";
 				console.log("Friend = " + key);
@@ -67,10 +64,11 @@ function listfrn() {
 }
 
 function selfrn(f) {
+	clearInterval(inter);
 	if (firstfrn) {
-		document.getElementById("radio" + firstfrn).parentElement.style.transform = "translateX(0px)";
+		document.getElementById("button" + firstfrn).style.transform = "translateX(0px)";
 	}
-	document.getElementById("radio" + f).parentElement.style.transform = "translateX(50px)";
+	document.getElementById("button" + f).style.transform = "translateX(50px)";
 	firstfrn = f;
 	
 	console.log("Selected friend = " + f);
@@ -82,9 +80,10 @@ function selfrn(f) {
 	chatpage.srcdoc = pages[frn];
 	//console.log(pages);
 	
-	setInterval(recmes, 5000);
+	inter = setInterval(recmes, 5000);
 }
 
 chatpage = document.getElementById("friendchat");
 pages = {};
 firstfrn = "";
+inter = "";

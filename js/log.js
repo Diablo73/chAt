@@ -18,9 +18,9 @@ const settings = {};
 db.settings(settings);
 
 function loginreg() {
-	pnum = document.getElementById("pnum").value;
+	pnum = "+91" + document.getElementById("pnum").value;
 	pass = document.getElementById("pass").value;
-	nick = document.getElementById("nick").value;
+	otp6 = document.getElementById("otp6").value;
 	
 	if (pnum.length < 10) {
 		console.log("Enter your phone number 10 digits long you idiot.......");
@@ -47,18 +47,9 @@ function loginreg() {
 				}
 			}
 			else {
-				if (nick && confirm("Register with -\t" + pnum + "\t" + nick + "\t?")) {
-					db.collection("messages").doc(pnum).set({
-						pass: pass,
-						nic: nick
-					});
-					console.log("Registered.......");
-					afterlog();
-					listfrn();
-				}
-				else {
-					alert("What do you want you idiot.......");
-				}
+				window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier("recaptchadiv");
+				recaptchaVerifier.render();
+				document.getElementById("otpdiv").style.display = "block";
 			}
 		}).catch(function(error) {
 		console.log("Error getting document:", error);
@@ -67,7 +58,7 @@ function loginreg() {
 }
 
 function addfrnfun() {
-	addpnum = document.getElementById("addpnum").value;
+	addpnum = "+91" + document.getElementById("addpnum").value;
 	addnick = document.getElementById("addnick").value;
 	
 	if (addpnum.length < 10) {
@@ -76,7 +67,7 @@ function addfrnfun() {
 	}
 	else if (!addnick) {
 		console.log("Enter nickname to add you idiot.......");
-		alert("Enter your password!!!");
+		alert("Enter a nickname!!!");
 	}
 	else {
 		document.getElementById("addpnum").value = "";
@@ -100,4 +91,41 @@ function addfrnfun() {
 		});
 	}
 	setTimeout(listfrn, 3000);
+}
+
+function sendotp() {
+	firebase.auth().signInWithPhoneNumber(pnum, recaptchaVerifier).then(function (confirmationResult) {
+		// SMS sent. Prompt user to type the code from the message, then sign the
+		// user in with confirmationResult.confirm(code).
+		window.confirmationResult = confirmationResult;
+		coderesult = confirmationResult;
+		console.log("OTP sent!!!!!!!");
+	}).catch(function (error) {
+		// Error; SMS not sent
+		console.log("SMS not sent : " + error);
+	});
+}
+
+function checkotp() {
+	otp6 = document.getElementById("otp6").value;
+	console.log(otp);
+
+	coderesult.confirm(otp).then(function(result) {
+		console.log("Registered.......");
+		console.log(result);
+		registerreg();
+	}).catch(function(error) {
+		document.getElementById("otp6").value = "";
+		document.getElementById("otp6").placeholder = "Invalid code! Try Again.......";
+		console.log(error);
+	});
+}
+
+function registerreg() {
+	db.collection("messages").doc(pnum).set({
+		pass: pass,
+	});
+	console.log("Registered.......");
+	afterlog();
+	listfrn();
 }
