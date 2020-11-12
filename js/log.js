@@ -108,9 +108,9 @@ function sendotp() {
 
 function checkotp() {
 	otp6 = document.getElementById("otp6").value;
-	console.log(otp);
+	console.log(otp6);
 
-	coderesult.confirm(otp).then(function(result) {
+	coderesult.confirm(otp6).then(function(result) {
 		console.log("Registered.......");
 		console.log(result);
 		registerreg();
